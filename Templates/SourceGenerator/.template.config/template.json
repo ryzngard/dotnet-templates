@@ -2,29 +2,15 @@
 {
     "$schema": "http://json.schemastore.org/template",
     "author": "Andrew (ryzngard) Hall",
-    "classifications": [ "Roslyn", "Analyzer" ], 
-    "name": "Roslyn Analyzer",
-    "identity": "Ryzngard.Roslyn.Analyzer.CSharp",         
-    "groupIdentity":"Ryzngard.Roslyn.Analyzer",
-    "shortName": "analyzer",
+    "classifications": [ "Roslyn", "SourceGenerator" ], 
+    "name": "Roslyn Source Generator",
+    "identity": "Ryzngard.Roslyn.SourceGenerator.CSharp",         
+    "groupIdentity":"Ryzngard.Roslyn.SourceGenerator",
+    "shortName": "sourcegen",
     "tags": {
       "language": "C#",
       "type":"project"
     },
-    "sourceName": "MyProject.Analyzer",
-    "preferNameDirectory": true,
-    "symbols":{
-      "includecodefix": {
-          "type": "parameter",
-          "datatype": "bool",
-          "defaultValue": "true"
-      }
-    },
-    "sources":[{
-      "modifiers": [{
-        "condition": "(!includecodefix)",
-        "exclude": [ "MyProject.Analyzer.CodeFixes/**/*"]
-        }
-      ]
-    }]
+    "sourceName": "MyProject",
+    "preferNameDirectory": true
   }

@@ -1,0 +1,32 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <PackageType>Template</PackageType>
+    <PackageVersion>1.0</PackageVersion>
+    <PackageId>Ryzngard.Dotnet.Templates</PackageId>
+    <Title>Ryzngard Dotnet Templates</Title>
+    <Authors>Andrew (ryzngard) Hall</Authors>
+    <Description>Extra templates for dotnet.</Description>
+    <PackageTags>dotnet-new;templates;</PackageTags>
+    <TargetFramework>netstandard2.0</TargetFramework>
+
+    <IncludeContentInPack>true</IncludeContentInPack>
+    <IncludeBuildOutput>false</IncludeBuildOutput>
+    <ContentTargetFolders>content</ContentTargetFolders>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <!-- Analyzer Template -->
+    <Content Include="Templates\Analyzer\MyProject.Analyzer\**\*" Exclude="Templates\Analyzer\MyProject.Analyzer\**\bin\**;Templates\Analyzer\MyProject.Analyzer\**\obj\**" />
+    <Content Include="Templates\Analyzer\MyProject.Analyzer.CodeFixes\**\*" Exclude="Templates\Analyzer\MyProject.Analyzer.CodeFixes\**\bin\**;Templates\Analyzer\MyProject.Analyzer\**\obj\**" />
+    <Content Include="Templates\Analyzer\.template.config\**\*" />
+
+    <!-- Source Generator Template -->
+    <Content Include="Templates\SourceGenerator\**\*" Exclude="Templates\SourceGenerator\**\bin\**;Templates\SourceGenerator\**\obj\**" />
+    <Content Include="Templates\SourceGenerator\.template.config\**\*" />
+
+    <!-- Exclude everything else -->
+    <Compile Remove="**\*" />
+  </ItemGroup>
+
+</Project>

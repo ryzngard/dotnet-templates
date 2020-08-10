@@ -4,6 +4,21 @@
 		<TargetFramework>netstandard2.0</TargetFramework>
 	</PropertyGroup>
 
+	<PropertyGroup>
+		<PackageType>Template</PackageType>
+		<PackageVersion>1.0</PackageVersion>
+		<PackageId>Ryzngard.Roslyn.SourceGenerator.CSharp</PackageId>
+		<Title>Roslyn Source Generator</Title>
+		<Authors>Andrew (ryzngard) Hall</Authors>
+		<Description>Templates to use when creating a new Roslyn source generator.</Description>
+		<PackageTags>dotnet-new;templates;roslyn;sourcegenerator</PackageTags>
+		<TargetFramework>netstandard2.0</TargetFramework>
+
+		<IncludeContentInPack>true</IncludeContentInPack>
+		<IncludeBuildOutput>false</IncludeBuildOutput>
+		<ContentTargetFolders>content</ContentTargetFolders>
+	</PropertyGroup>
+
 	<ItemGroup>
 		<PackageReference Include="Microsoft.CodeAnalysis.Analyzers" Version="3.0.0" PrivateAssets="all" />
 		<PackageReference Include="Microsoft.CodeAnalysis.CSharp.Workspaces" Version="3.7.0" />
