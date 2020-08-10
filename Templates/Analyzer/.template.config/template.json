@@ -1,0 +1,30 @@
+
+{
+    "$schema": "http://json.schemastore.org/template",
+    "author": "Andrew (ryzngard) Hall",
+    "classifications": [ "Roslyn", "Analyzer" ], 
+    "name": "Roslyn Analyzer",
+    "identity": "Ryzngard.Roslyn.Analyzer.CSharp",         
+    "groupIdentity":"Ryzngard.Roslyn.Analyzer",
+    "shortName": "analyzer",
+    "tags": {
+      "language": "C#",
+      "type":"project"
+    },
+    "sourceName": "MyProject.Analyzer",
+    "preferNameDirectory": true,
+    "symbols":{
+      "includecodefix": {
+          "type": "parameter",
+          "datatype": "bool",
+          "defaultValue": "true"
+      }
+    },
+    "sources":[{
+      "modifiers": [{
+        "condition": "(!includecodefix)",
+        "exclude": [ "MyProject.Analyzer.CodeFixes/**/*"]
+        }
+      ]
+    }]
+  }

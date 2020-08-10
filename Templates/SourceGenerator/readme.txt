@@ -1,0 +1,1 @@
+A base template for creating a new Roslyn source generator

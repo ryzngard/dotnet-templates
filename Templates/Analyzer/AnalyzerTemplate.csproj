@@ -1,0 +1,25 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <PackageType>Template</PackageType>
+    <PackageVersion>1.0</PackageVersion>
+    <PackageId>Ryzngard.Roslyn.Analyzer.CSharp</PackageId>
+    <Title>Roslyn Analyzer</Title>
+    <Authors>Andrew (ryzngard) Hall</Authors>
+    <Description>Templates to use when creating a new Roslyn analyzer.</Description>
+    <PackageTags>dotnet-new;templates;roslyn;analyzer</PackageTags>
+    <TargetFramework>netstandard2.0</TargetFramework>
+
+    <IncludeContentInPack>true</IncludeContentInPack>
+    <IncludeBuildOutput>false</IncludeBuildOutput>
+    <ContentTargetFolders>content</ContentTargetFolders>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Content Include="MyProject.Analyzer\**\*" Exclude="MyProject.Analyzer\**\bin\**;MyProject.Analyzer\**\obj\**" />
+    <Content Include="MyProject.Analyzer.CodeFixes\**\*" Exclude="MyProject.Analyzer.CodeFixes\**\bin\**;MyProject.Analyzer\**\obj\**" />
+    <Content Include=".template.config\**\*" />
+    <Compile Remove="**\*" />
+  </ItemGroup>
+
+</Project>
